@@ -96,6 +96,7 @@ vim.lsp.enable('gopls')
 vim.lsp.enable('omnisharp')
 vim.lsp.enable('eslint')
 vim.lsp.enable('rust_analyzer')
+vim.lsp.enable('prettier')
 
 vim.keymap.set("n", "<leader>ex", vim.cmd.Ex)
 
