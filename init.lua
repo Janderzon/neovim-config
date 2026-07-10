@@ -30,6 +30,22 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+vim.diagnostic.config({
+  virtual_text = {
+    prefix = "●",
+    source = "if_many",
+  },
+  float = {
+    source = "always",
+    border = "rounded",
+  },
+  severity_sort = true,
+})
+
+vim.keymap.set("n", "<leader>ca", function()
+  vim.cmd.RustLsp("codeAction")
+end, { desc = "Rust code action" })
+
 require("lazy").setup("plugins", {
     rocks = {
         enabled = false,

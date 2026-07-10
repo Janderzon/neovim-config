@@ -9,6 +9,9 @@ return {
     config = function()
       require("mason-lspconfig").setup({
         ensure_installed = { "rust_analyzer" },
+        automatic_enable = {
+          exclude = { "rust_analyzer" },
+        },
       })
     end,
   },
