@@ -19,6 +19,7 @@ opt.expandtab = true
 opt.shiftwidth = 4
 opt.tabstop = 4
 opt.termguicolors = true
+opt.scrolloff = 8
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -45,6 +46,7 @@ vim.diagnostic.config({
 vim.keymap.set("n", "<leader>ca", function()
   vim.cmd.RustLsp("codeAction")
 end, { desc = "Rust code action" })
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol" })
 
 require("lazy").setup("plugins", {
     rocks = {
