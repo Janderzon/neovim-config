@@ -8,7 +8,7 @@ return {
     dependencies = { "mason.nvim" },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "rust_analyzer" },
+        ensure_installed = { "rust_analyzer", "csharp_ls" },
         automatic_enable = {
           exclude = { "rust_analyzer" },
         },
