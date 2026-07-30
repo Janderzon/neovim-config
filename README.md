@@ -38,6 +38,12 @@ Provides the icons used by the file explorer, statusline, and diagnostics. Witho
 2. Install it (double-click the `.ttf`/`.otf` file → Install).
 3. Set it as the font in your terminal app (Windows Terminal, etc.) under Settings → Profile → Appearance → Font face.
 
+## taplo
+For formatting toml files.
+```powershell
+winget install tamasfe.taplo
+```
+
 ## 2. Neovim itself
 
 If not already installed:
