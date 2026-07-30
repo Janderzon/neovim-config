@@ -9,6 +9,14 @@ return {
           quit_on_open = true,
         },
       },
+      filesystem_watchers = {
+        enable = true,
+        ignore_dirs = {
+          "bin",
+          "obj",
+          "target",
+        },
+      },
     })
   end,
 }
