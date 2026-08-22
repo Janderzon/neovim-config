@@ -68,6 +68,17 @@ vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<cr>", { desc = "Increa
 vim.keymap.set("n", "<leader>sc", "<cmd>close<cr>", { desc = "Close split" })
 vim.keymap.set("n", "<leader>se", "<C-w>=", { desc = "Equalize split sizes" })
 vim.keymap.set("n", "<leader>so", "<cmd>only<cr>", { desc = "Close all other splits" })
+vim.keymap.set("n", "<leader>to", "<cmd>tabnew<cr>", { desc = "Open new tab" })
+vim.keymap.set("n", "<leader>tc", "<cmd>tabclose<cr>", { desc = "Close current tab" })
+vim.keymap.set("n", "<leader>tx", "<cmd>tabonly<cr>", { desc = "Close all other tabs" })
+vim.keymap.set("n", "<Tab>", "<cmd>tabnext<cr>", { desc = "Next tab" })
+vim.keymap.set("n", "<S-Tab>", "<cmd>tabprevious<cr>", { desc = "Previous tab" })
+vim.keymap.set("n", "<leader>1", "1gt", { desc = "Go to tab 1" })
+vim.keymap.set("n", "<leader>2", "2gt", { desc = "Go to tab 2" })
+vim.keymap.set("n", "<leader>3", "3gt", { desc = "Go to tab 3" })
+vim.keymap.set("n", "<leader>4", "4gt", { desc = "Go to tab 4" })
+vim.keymap.set("n", "<leader>tm", "<cmd>tabmove +1<cr>", { desc = "Move tab right" })
+vim.keymap.set("n", "<leader>tM", "<cmd>tabmove -1<cr>", { desc = "Move tab left" })
 
 vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight yanked text",
