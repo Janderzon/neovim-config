@@ -31,18 +31,18 @@ Used by Telescope for fast fuzzy/live-grep searching.
 winget install BurntSushi.ripgrep.MSVC
 ```
 
+### StyLua
+Use to formate lua files.
+```powershell
+winget install JohnnyMorganz.StyLua
+```
+
 ### A Nerd Font
 Provides the icons used by the file explorer, statusline, and diagnostics. Without this, icons render as boxes/question marks.
 
 1. Download a font from [nerdfonts.com](https://www.nerdfonts.com/) — e.g. **JetBrainsMono Nerd Font**.
 2. Install it (double-click the `.ttf`/`.otf` file → Install).
 3. Set it as the font in your terminal app (Windows Terminal, etc.) under Settings → Profile → Appearance → Font face.
-
-## taplo
-For formatting toml files.
-```powershell
-winget install tamasfe.taplo
-```
 
 ## 2. Neovim itself
 

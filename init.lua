@@ -23,28 +23,31 @@ opt.scrolloff = 8
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git", "clone", "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", lazypath,
-  })
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable",
+		lazypath,
+	})
 end
 vim.opt.rtp:prepend(lazypath)
 
 vim.diagnostic.config({
-  virtual_text = {
-    prefix = "●",
-    source = "if_many",
-  },
-  float = {
-    source = "always",
-    border = "rounded",
-  },
-  severity_sort = true,
+	virtual_text = {
+		prefix = "●",
+		source = "if_many",
+	},
+	float = {
+		source = "always",
+		border = "rounded",
+	},
+	severity_sort = true,
 })
 
 vim.keymap.set("n", "<leader>ca", function()
-  vim.cmd.RustLsp("codeAction")
+	vim.cmd.RustLsp("codeAction")
 end, { desc = "Rust code action" })
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol" })
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
@@ -54,14 +57,14 @@ vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementa
 vim.keymap.set("n", "gy", vim.lsp.buf.type_definition, { desc = "Go to type definition" })
 
 vim.api.nvim_create_autocmd("TextYankPost", {
-  desc = "Highlight yanked text",
-  callback = function()
-    vim.highlight.on_yank({ higroup = "IncSearch", timeout = 200 })
-  end,
+	desc = "Highlight yanked text",
+	callback = function()
+		vim.highlight.on_yank({ higroup = "IncSearch", timeout = 200 })
+	end,
 })
 
 require("lazy").setup("plugins", {
-    rocks = {
-        enabled = false,
-    },
+	rocks = {
+		enabled = false,
+	},
 })
