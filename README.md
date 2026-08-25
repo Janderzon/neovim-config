@@ -37,6 +37,10 @@ Use to formate lua files.
 winget install JohnnyMorganz.StyLua
 ```
 
+### TreeSitter
+Used for the treesitter plugin
+[download](https://github.com/tree-sitter/tree-sitter/releases)
+
 ### A Nerd Font
 Provides the icons used by the file explorer, statusline, and diagnostics. Without this, icons render as boxes/question marks.
 
